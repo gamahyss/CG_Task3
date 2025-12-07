@@ -1,5 +1,6 @@
 package test.java.com.example.math;
 
+import main.java.com.example.math.Vector3;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import main.java.com.example.math.Vector4;
@@ -67,6 +68,13 @@ class Vector4Test {
         Vector4 v1 = new Vector4(1, 2, 3, 4);
         Vector4 v2 = new Vector4(5, 6, 7, 8);
         assertEquals(70.0, v1.dot(v2), 1e-10);
+    }
+
+    @Test
+    void testToVector3(){
+        Vector4 v1 = new Vector4(1, 1, 1, 1);
+        Vector3 v2 = new Vector3(1, 1, 1);
+        assertEquals(v2, Vector4.toVector3(v1));
     }
 
     @Test

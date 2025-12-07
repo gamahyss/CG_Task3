@@ -1,6 +1,7 @@
 package main.java.com.example.math;
 
 import java.util.Locale;
+import main.java.com.example.math.Vector4;
 
 public class Vector3 {
     private final double x;
@@ -58,6 +59,11 @@ public class Vector3 {
                 this.z * other.x - this.x * other.z,
                 this.x * other.y - this.y * other.x
         );
+    }
+
+    public static Vector4 toVector4(Vector3 vector){
+        Vector4 result = new Vector4(vector.getX(), vector.getY(), vector.getZ(), 1);
+        return result;
     }
 
     @Override

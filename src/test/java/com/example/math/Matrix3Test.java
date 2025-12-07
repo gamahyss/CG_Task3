@@ -1,5 +1,6 @@
 package test.java.com.example.math;
 
+import main.java.com.example.math.Vector3;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import main.java.com.example.math.Matrix3;
@@ -157,5 +158,13 @@ class Matrix3Test {
         assertTrue(str.contains("]"));
         assertTrue(str.contains("1.1235"));
         assertTrue(str.contains("9.9012"));
+    }
+
+    @Test
+    void testMultiplyByVector(){
+        Matrix3 m = Matrix3.identity();
+        Vector3 v = new Vector3(0, 0, 0);
+        Matrix3 expected = Matrix3.zero();
+        assertEquals(expected, m.multiplyByVector(v));
     }
 }

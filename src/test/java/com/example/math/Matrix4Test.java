@@ -1,5 +1,8 @@
 package test.java.com.example.math;
 
+import main.java.com.example.math.Matrix3;
+import main.java.com.example.math.Vector3;
+import main.java.com.example.math.Vector4;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import main.java.com.example.math.Matrix4;
@@ -185,5 +188,25 @@ class Matrix4Test {
         assertTrue(str.contains("]"));
         assertTrue(str.contains("1.1000"));
         assertTrue(str.contains("16.1600"));
+    }
+
+    @Test
+    void testMultiplyByVector(){
+        double[][] data = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16}
+        };
+        Matrix4 m = new Matrix4(data);
+        Vector4 v = new Vector4(0, 0, 0, 0);
+        double[][] data2 = {
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+        };
+        Matrix4 expected = new Matrix4(data2);
+        assertEquals(expected, m.multiplyByVector(v));
     }
 }

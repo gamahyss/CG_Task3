@@ -107,6 +107,19 @@ public class Matrix3 {
         return new Matrix3(result);
     }
 
+    public Matrix3 multiplyByVector(Vector3 v){
+        data[0][0] *= v.getX();
+        data[0][1] *= v.getY();
+        data[0][2] *= v.getZ();
+        data[1][0] *= v.getX();
+        data[1][1] *= v.getY();
+        data[1][2] *= v.getZ();
+        data[2][0] *= v.getX();
+        data[2][1] *= v.getY();
+        data[2][2] *= v.getZ();
+        return new Matrix3(data);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

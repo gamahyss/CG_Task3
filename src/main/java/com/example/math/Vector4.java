@@ -60,6 +60,11 @@ public class Vector4 {
                 this.z * other.z + this.w * other.w;
     }
 
+    public static Vector3 toVector3(Vector4 v){
+        Vector3 result = new Vector3(v.getX(), v.getY(), v.getZ());
+        return result;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
