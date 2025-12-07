@@ -125,10 +125,10 @@ public class Matrix4 {
 
     public Vector4 multiplyByVector(Vector4 v){
         double[][] result = new double[4][1];
-        result[0][0] = (data[0][0] + data[0][1] + data[0][2] + data[0][3]) * v.getX();
-        result[1][0] = (data[1][0] + data[1][1] + data[1][2] + data[1][3]) * v.getY();
-        result[2][0] = (data[2][0] + data[2][1] + data[2][2] + data[2][3]) * v.getZ();
-        result[3][0] = (data[3][0] + data[3][1] + data[3][2] + data[3][3]) * v.getW();
+        result[0][0] = data[0][0] * v.getX() + data[0][1] * v.getY() + data[0][2] * v.getZ() + data[0][3] * v.getW();
+        result[1][0] = data[1][0] * v.getX() + data[1][1] * v.getY() + data[1][2] * v.getZ() + data[1][3] * v.getW();
+        result[2][0] = data[2][0] * v.getX() + data[2][1] * v.getY() + data[2][2] * v.getZ() + data[2][3] * v.getW();
+        result[3][0] = data[3][0] * v.getX() + data[3][1] * v.getY() + data[3][2] * v.getZ() + data[3][3] * v.getW();
         Vector4 result_vector = new Vector4(result[0][0], result[1][0], result[2][0], result[3][0]);
         return result_vector;
     }

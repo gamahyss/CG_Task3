@@ -199,7 +199,8 @@ class Matrix4Test {
                 {13, 14, 15, 16}
         };
         Matrix4 m = new Matrix4(data);
-        Vector4 v = new Vector4(0, 0, 0, 0);
-        assertEquals(v, m.multiplyByVector(v));
+        Vector4 v = new Vector4(1, 2, 3, 4);
+        Vector4 v_expected = new Vector4(30, 70, 110, 150);
+        assertEquals(v_expected, m.multiplyByVector(v));
     }
 }

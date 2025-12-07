@@ -1,6 +1,8 @@
 package test.java.com.example.math;
 
+import main.java.com.example.math.Matrix4;
 import main.java.com.example.math.Vector3;
+import main.java.com.example.math.Vector4;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import main.java.com.example.math.Matrix3;
@@ -162,8 +164,14 @@ class Matrix3Test {
 
     @Test
     void testMultiplyByVector(){
-        Matrix3 m = Matrix3.identity();
-        Vector3 v = new Vector3(0, 0, 0);
-        assertEquals(v, m.multiplyByVector(v));
+        double[][] data = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9},
+        };
+        Matrix3 m = new Matrix3(data);
+        Vector3 v = new Vector3(1, 2, 3);
+        Vector3 v_expected = new Vector3(14, 32, 50);
+        assertEquals(v_expected, m.multiplyByVector(v));
     }
 }

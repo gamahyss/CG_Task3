@@ -109,9 +109,9 @@ public class Matrix3 {
 
     public Vector3 multiplyByVector(Vector3 v){
         double[][] result = new double[3][1];
-        result[0][0] = (data[0][0] + data[0][1] + data[0][2]) * v.getX();
-        result[1][0] = (data[1][0] + data[1][1] + data[1][2]) * v.getY();
-        result[2][0] = (data[2][0] + data[2][1] + data[2][2]) * v.getZ();
+        result[0][0] = data[0][0] * v.getX() + data[0][1] * v.getY() + data[0][2] * v.getZ();
+        result[1][0] = data[1][0] * v.getX() + data[1][1] * v.getY() + data[1][2] * v.getZ();
+        result[2][0] = data[2][0] * v.getX() + data[2][1] * v.getY() + data[2][2] * v.getZ();
         Vector3 result_vector = new Vector3(result[0][0], result[1][0], result[2][0]);
         return result_vector;
     }
