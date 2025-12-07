@@ -1,8 +1,8 @@
-package MathTest;
+package test.java.com.example.math;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import Math.Matrix3;
+import main.java.com.example.math.Matrix3;
 
 class Matrix3Test {
 

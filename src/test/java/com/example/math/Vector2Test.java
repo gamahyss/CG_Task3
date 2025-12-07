@@ -1,8 +1,8 @@
-package MathTest;
+package test.java.com.example.math;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import Math.Vector2;
+import main.java.com.example.math.Vector2;
 
 class Vector2Test {
 

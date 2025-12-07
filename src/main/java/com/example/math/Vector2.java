@@ -1,4 +1,4 @@
-package Math;
+package main.java.com.example.math;
 
 public class Vector2 {
     private final double x;

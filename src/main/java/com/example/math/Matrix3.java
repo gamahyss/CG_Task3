@@ -1,5 +1,5 @@
 // Math/Matrix3.java
-package Math;
+package main.java.com.example.math;
 
 public class Matrix3 {
     private final double[][] data;
