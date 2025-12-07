@@ -200,13 +200,6 @@ class Matrix4Test {
         };
         Matrix4 m = new Matrix4(data);
         Vector4 v = new Vector4(0, 0, 0, 0);
-        double[][] data2 = {
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0}
-        };
-        Matrix4 expected = new Matrix4(data2);
-        assertEquals(expected, m.multiplyByVector(v));
+        assertEquals(v, m.multiplyByVector(v));
     }
 }

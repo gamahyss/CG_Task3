@@ -164,7 +164,6 @@ class Matrix3Test {
     void testMultiplyByVector(){
         Matrix3 m = Matrix3.identity();
         Vector3 v = new Vector3(0, 0, 0);
-        Matrix3 expected = Matrix3.zero();
-        assertEquals(expected, m.multiplyByVector(v));
+        assertEquals(v, m.multiplyByVector(v));
     }
 }
