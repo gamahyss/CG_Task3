@@ -1,6 +1,8 @@
 // Math/Matrix3.java
 package main.java.com.example.math;
 
+import java.util.Locale;
+
 public class Matrix3 {
     private final double[][] data;
 
@@ -126,7 +128,7 @@ public class Matrix3 {
         for (int i = 0; i < 3; i++) {
             sb.append("[");
             for (int j = 0; j < 3; j++) {
-                sb.append(String.format("%.4f", data[i][j]));
+                sb.append(String.format(Locale.US,"%.4f", data[i][j]));
                 if (j < 2) sb.append(", ");
             }
             sb.append("]\n");

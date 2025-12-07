@@ -94,7 +94,7 @@ class Vector3Test {
     void testToString() {
         Vector3 v = new Vector3(1.23456, 2.34567, 3.45678);
         String str = v.toString();
-        assertTrue(str.contains("Вектор3"));
+        assertTrue(str.contains("Vector3"));
         assertTrue(str.contains("1.2346"));
         assertTrue(str.contains("2.3457"));
         assertTrue(str.contains("3.4568"));

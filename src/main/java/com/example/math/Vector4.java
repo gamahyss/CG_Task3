@@ -1,5 +1,7 @@
 package main.java.com.example.math;
 
+import java.util.Locale;
+
 public class Vector4 {
     private final double x;
     private final double y;
@@ -71,6 +73,6 @@ public class Vector4 {
 
     @Override
     public String toString() {
-        return String.format("Vector4(%.4f, %.4f, %.4f, %.4f)", x, y, z, w);
+        return String.format(Locale.US,"Vector4(%.4f, %.4f, %.4f, %.4f)", x, y, z, w);
     }
 }

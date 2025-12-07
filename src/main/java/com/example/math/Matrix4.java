@@ -1,5 +1,7 @@
 package main.java.com.example.math;
 
+import java.util.Locale;
+
 public class Matrix4 {
     private final double[][] data;
 
@@ -142,7 +144,7 @@ public class Matrix4 {
         for (int i = 0; i < 4; i++) {
             sb.append("[");
             for (int j = 0; j < 4; j++) {
-                sb.append(String.format("%.4f", data[i][j]));
+                sb.append(String.format(Locale.US, "%.4f", data[i][j]));
                 if (j < 3) sb.append(", ");
             }
             sb.append("]\n");

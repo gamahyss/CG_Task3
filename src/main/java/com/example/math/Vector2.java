@@ -1,5 +1,7 @@
 package main.java.com.example.math;
 
+import java.util.Locale;
+
 public class Vector2 {
     private final double x;
     private final double y;
@@ -58,6 +60,6 @@ public class Vector2 {
 
     @Override
     public String toString() {
-        return String.format("Вектор2(%.2f, %.2f)", x, y);
+        return String.format(Locale.US,"Vector2(%.2f, %.2f)", x, y);
     }
 }
